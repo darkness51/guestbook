@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %} Index {% endblock %}
+
+{% block content %} 
+    <div class="row-fluid">
+        <div class="hero-unit">
+            <h1>Bienvenidos!</h1>
+        </div>
+        <section class="row-fluid">
+            <div class="span1"></div>
+            <div class="span10">
+            <p>
+                <a href="{% url agregar %}" class="btn btn-primary">Agregar</a>
+            </p>
+            <table class="table table-bordered">
+                <tr>
+                    <th>User</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+                {% for visit in visits %}
+                    <tr>
+                        <td>{{ visit.user }}</td>
+                        <td>{{ visit.email }}</td>
+                        <td>{{ visit.text }}</td>
+                        <td>{{ visit.date }}</td>
+                        <td>
+                            <a href="{% url editar visit.id %}" class="btn">Edit</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            </div>
+            <div class="span1"></div>
+        </section>
+    </div>
+{% endblock %}

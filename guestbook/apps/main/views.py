@@ -1,11 +1,11 @@
-from django.conf			import settings
+from django.conf		import settings
 from django.core.mail		import send_mail
-from django.http			import HttpResponseRedirect,HttpResponse,HttpResponseForbidden, Http404
+from django.http		import HttpResponseRedirect,HttpResponse,HttpResponseForbidden, Http404
 from django.shortcuts 		import render_to_response, get_object_or_404, get_list_or_404
 from django.template	  	import RequestContext
 from django.views.generic	import TemplateView, FormView
-from main.forms				import MessageForm
-from main.models			import Message
+from main.forms			import MessageForm
+from main.models		import Message
 
 def index(request):
 	visits = Message.objects.all()

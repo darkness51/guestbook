@@ -1,10 +1,19 @@
-guestbook
+Guestbook
 =========
 
 Proyecto para el taller de Django de post.mejorando.la
 
-Nota:
-====
-1- crear el directorio db en la raiz del proyecto.
-2- ejecutar el comando python manage.py syncdb.
-3- python manage.py runserver.
+Notas:
+-----
+- Crea el directorio db en la raiz del proyecto.
+- Sincroniza la base de datos:
+
+```bash
+  python manage.py syncdb
+```
+
+- Arranca el servidor de desarrollo:
+
+```bash
+  python manage.py runserver
+```

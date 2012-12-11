@@ -5,8 +5,8 @@
 {% block content %}
 	<div class="row-fluid">
 		<section class="row-fluid">
-			<div class="span3"></div>
-			<div class="span9">
+			<div class="span10 offset1">
+				<h1>Agregar Visita</h1>
 				<form method="POST">
 					{% csrf_token %}
 					{{ form.as_p }}

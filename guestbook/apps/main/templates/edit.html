@@ -3,15 +3,14 @@
 {% block title %} Editar visita {% endblock %}
 
 {% block content %}
-	<div class="row-fluid">
-		<section class="row-fluid">
-			<div class="span3"></div>
-			<div class="span9">
-				<form method="POST">
-					{% csrf_token %}
-					{{ form.as_p }}
-					<input type="submit" value="Modificar" class="btn btn-primary">
-				</form>
-			</div>
-		</section>
+	<section class="row-fluid">
+		<div class="span10 offset1">
+			<h1>Modificar Visita</h1>
+			<form method="POST">
+				{% csrf_token %}
+				{{ form.as_p }}
+				<input type="submit" value="Modificar" class="btn btn-primary">
+			</form>
+		</div>
+	</section>
 {% endblock %}
